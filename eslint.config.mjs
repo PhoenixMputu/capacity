@@ -48,7 +48,8 @@ const eslintConfig = [
       ".next/",
       "out/",
       "*.d.ts",
-      "*.env"
+      "*.env",
+      "*.env.*",
     ]
   }
 ];
