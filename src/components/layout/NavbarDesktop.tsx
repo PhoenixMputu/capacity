@@ -7,11 +7,7 @@ import {
 import { Button } from '@/components/ui/button';
 import Image from 'next/image';
 import Logo from '@/assets/logo.svg';
-
-type NavbarLink = {
-	name: string;
-	href: string;
-};
+import { NavbarLink } from '@/types/navbar';
 
 type NavbarDesktopProps = {
 	links: NavbarLink[];
@@ -30,7 +26,7 @@ function NavbarDesktop({ links }: NavbarDesktopProps) {
 					/>
 				</div>
 				<NavigationMenu>
-					<NavigationMenuList className='flex gap-8 justify-center items-center'>
+					<NavigationMenuList className='flex gap-x-1 justify-center items-center'>
 						{links.map((link) => (
 							<NavigationMenuItem key={link.name}>
 								<NavigationMenuLink
@@ -43,8 +39,8 @@ function NavbarDesktop({ links }: NavbarDesktopProps) {
 					</NavigationMenuList>
 				</NavigationMenu>
 				<div className='flex gap-4'>
-					<Button variant='default'>Login</Button>
-					<Button variant='outline'>Sign Up</Button>
+					<Button variant='default'>Faire un don</Button>
+					<Button variant='outline'>Se connecter</Button>
 				</div>
 			</div>
 		</nav>
