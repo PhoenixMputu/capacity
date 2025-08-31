@@ -4,7 +4,7 @@ export default function Home() {
 	return (
 		<NavbarDesktop
 			links={[
-				{ name: 'Home', href: '/' },
+				{ name: 'Accueil', href: '/' },
 				{ name: 'Features', href: '/features' },
 				{ name: 'Pricing', href: '/pricing' },
 				{ name: 'About', href: '/about' },
