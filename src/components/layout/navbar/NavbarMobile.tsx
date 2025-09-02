@@ -16,12 +16,12 @@ type NavbarTabletProps = {
 	links: NavbarLink[];
 };
 
-export const NavbarTablet = ({ links }: NavbarTabletProps) => {
+export const NavbarMobile = ({ links }: NavbarTabletProps) => {
 	const [isVisible, setIsVisible] = useState(false);
 
 	return (
-		<nav className='relative min-w-[640px] max-w-[1024px] mx-auto px-4 py-2'>
-			<div className='flex flex-row justify-between items-center h-16'>
+		<nav className='relative min-w-[320px] max-w-[640px] mx-auto px-4'>
+			<div className='flex flex-row-reverse justify-between items-center h-16'>
 				<button
 					onClick={() => setIsVisible((v) => !v)}
 					aria-label='Ouvrir le menu'
@@ -36,18 +36,13 @@ export const NavbarTablet = ({ links }: NavbarTabletProps) => {
 						height={100}
 					/>
 				</div>
-				<Button
-					variant='default'
-					className='px-4 py-2 text-sm rounded-md'>
-					Faire un don
-				</Button>
 			</div>
 			{isVisible && (
-				<div className='absolute left-0 right-0 top-20 bg-white z-10 px-4 py-6 flex flex-col items-start gap-4'>
-					<NavigationMenu>
-						<NavigationMenuList className='flex flex-col gap-2 items-start'>
+				<div className='absolute left-0 right-0 top-12 bg-white z-10 px-4 py-2 flex flex-col items-start gap-4'>
+					<NavigationMenu className='w-full'>
+						<NavigationMenuList className='w-full flex flex-col gap-2 items-start'>
 							{links.map((link) => (
-								<NavigationMenuItem key={link.name}>
+								<NavigationMenuItem className='w-full' key={link.name}>
 									<NavigationMenuLink
 										href={link.href}
 										className='font-medium hover:text-orange-600 transition'>
@@ -57,6 +52,7 @@ export const NavbarTablet = ({ links }: NavbarTabletProps) => {
 							))}
 						</NavigationMenuList>
 					</NavigationMenu>
+					<Button variant='default'>Faire un don</Button>
 					<Button variant='outline'>Se connecter</Button>
 				</div>
 			)}

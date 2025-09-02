@@ -1,5 +1,5 @@
-import NavbarDesktop from '@/components/layout/NavbarDesktop';
-import { NavbarTablet } from '@/components/layout/NavbarTablet';
+import NavbarDesktop from '@/components/layout/navbar/NavbarDesktop';
+import { NavbarMobile } from '@/components/layout/navbar/NavbarMobile';
 import { NavbarLink } from '@/types/navbar';
 
 export default function Home() {
@@ -13,7 +13,7 @@ export default function Home() {
 
   return (
     <div>
-      <NavbarTablet links={links} />
+      <NavbarMobile links={links} />
     </div>
   );
 }
