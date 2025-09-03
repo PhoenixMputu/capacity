@@ -5,9 +5,8 @@ import {
 	NavigationMenuList,
 } from '@/components/ui/navigation-menu';
 import { Button } from '@/components/ui/button';
-import Image from 'next/image';
-import Logo from '@/assets/logo.svg';
 import { NavbarLink } from '@/types/navbar';
+import Image from 'next/image';
 
 type NavbarDesktopProps = {
 	links: NavbarLink[];
@@ -19,7 +18,7 @@ function NavbarDesktop({ links }: NavbarDesktopProps) {
 			<div className='max-w-[1222px] mx-auto flex items-center justify-between h-20 px-6'>
 				<div className='flex-shrink-0'>
 					<Image
-						src={Logo}
+						src={'/logo.svg'}
 						alt='Logo Capacity'
 						width={100}
 						height={100}

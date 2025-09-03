@@ -1,7 +1,6 @@
 'use client';
 import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
-import Logo from '@/assets/logo.svg';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { NavbarLink } from '@/types/navbar';
@@ -16,7 +15,7 @@ type NavbarTabletProps = {
 	links: NavbarLink[];
 };
 
-export const NavbarTablet = ({ links }: NavbarTabletProps) => {
+const NavbarTablet = ({ links }: NavbarTabletProps) => {
 	const [isVisible, setIsVisible] = useState(false);
 
 	return (
@@ -31,7 +30,7 @@ export const NavbarTablet = ({ links }: NavbarTabletProps) => {
 				<div className='flex-shrink-0'>
 					<Image
 						alt='Logo Capacity'
-						src={Logo}
+						src={'/logo.svg'}
 						width={100}
 						height={100}
 					/>
@@ -59,3 +58,5 @@ export const NavbarTablet = ({ links }: NavbarTabletProps) => {
 		</nav>
 	);
 };
+
+export default NavbarTablet;
