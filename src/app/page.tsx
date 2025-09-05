@@ -12,6 +12,35 @@ import { ArrowRight } from 'lucide-react';
 import HeroIllustration from '@/assets/hero.jpeg';
 import Sponsorship from '@/components/layout/sponsorship/Sponsorship';
 import { SponsorshipProps } from '@/types/sponsorship';
+import ProfileCard from '@/components/custom/card/ProfileCard';
+import { ProfileCardProps } from '@/types/card';
+
+const profiles: ProfileCardProps[] = [
+	{
+		image: '/victory.jpeg',
+		name: 'Victory Deo',
+		role: 'Software Engineer',
+		handicap: 'Handicape Moteur',
+	},
+	{
+		image: '/victory.jpeg',
+		name: 'Victory Deo',
+		role: 'Software Engineer',
+		handicap: 'Handicape Moteur',
+	},
+	{
+		image: '/victory.jpeg',
+		name: 'Victory Deo',
+		role: 'Software Engineer',
+		handicap: 'Handicape Moteur',
+	},
+	{
+		image: '/victory.jpeg',
+		name: 'Victory Deo',
+		role: 'Software Engineer',
+		handicap: 'Handicape Moteur',
+	},
+];
 
 const sponsors: SponsorshipProps = {
 	title: 'Il nous soutiennent',
@@ -87,14 +116,31 @@ export default function Home() {
 							/>
 						</div>
 					</div>
-					<div className='w-full flex flex-col justify-center items-center px-4'>
+					<div className='w-full flex flex-col mb-3 justify-center items-center px-4'>
 						<Sponsorship
 							title={sponsors.title}
 							sponsors={sponsors.sponsors}
 						/>
 					</div>
 				</section>
-				<section></section>
+				<section className='w-full bg-white flex flex-col items-center'>
+					<div className='max-w-[1222px] flex flex-col items-start justify-start mx-auto text-start px-4 py-8'>
+						<div className='w-full flex flex-col gap-3'>
+							<h2 className='font-bold text-2xl'>Freelances</h2>
+							<p className='text-base'>
+								Découvrez les profils experts et talentueux des nos freelances
+							</p>
+						</div>
+						<div className='w-full pt-8 flex flex-wrap flex-row gap-y-6 gap-x-6 lg:justify-between lg:gap-x-0 justify-center items-center'>
+							{profiles.map((profile) => (
+								<ProfileCard {...profile} />
+							))}
+						</div>
+						<div className='w-full text-center mt-4'>
+							<Button variant={'link'}>Voir plus</Button>
+						</div>
+					</div>
+				</section>
 			</main>
 		</>
 	);
