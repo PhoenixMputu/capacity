@@ -37,7 +37,7 @@ export const metadata: Metadata = {
 		siteName: 'Capacity',
 		images: [
 			{
-				url: './assets/icon.svg',
+				url: './icon.svg',
 				width: 1200,
 				height: 630,
 				alt: 'Capacity - Inclusion et Talents Handicapés',
@@ -51,7 +51,7 @@ export const metadata: Metadata = {
 		title: 'Capacity - Mettre en avant les talents handicapés',
 		description:
 			'Découvrez et soutenez les talents en situation de handicap grâce à Capacity.',
-		images: ['src/assets/icon.svg'], // idem à remplacer
+		images: ['./icon.svg'], // idem à remplacer
 		creator: '@capacity_app', // ton futur handle Twitter/X si tu en as un
 	},
 };

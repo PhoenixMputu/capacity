@@ -10,7 +10,7 @@ export default function ProfileCard({
   handicap,
 }: ProfileCardProps) {
   return (
-    <Card className="max-w-76 w-77 rounded-xl flex flex-col gap-6 border-none p-6">
+    <Card className="max-w-76 bg-white w-77 rounded-xl flex flex-col gap-6 border-none p-6">
       <div className="relative w-full h-44 rounded-xl">
         <Image
           src={image}
@@ -22,7 +22,7 @@ export default function ProfileCard({
       </div>
 
       <CardContent className="w-full p-0 flex flex-col items-start justify-start gap-1">
-        <h2 className="text-lg font-bold">{name}</h2>
+        <h3 className="text-lg font-bold">{name}</h3>
         <p className="text-base font-medium text-gray-800">{role}</p>
         <p className="text-base text-gray-500">{handicap}</p>
       </CardContent>

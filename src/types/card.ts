@@ -4,3 +4,10 @@ export interface ProfileCardProps {
 	role: string;
 	handicap: string;
 }
+
+export interface TestimonialCardProps {
+	image: string;
+	name: string;
+	role: string;
+	description: string;
+}

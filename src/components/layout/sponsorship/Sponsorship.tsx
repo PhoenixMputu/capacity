@@ -13,9 +13,9 @@ const Sponsorship: React.FC<SponsorshipProps> = ({ title, sponsors }) => (
 					key={sponsor.name}
 					src={sponsor.logoUrl}
 					alt={sponsor.alt || sponsor.name}
-					width={120}
+					width={100}
 					height={50}
-					className='h-[40px] md:h-[50px] max-w-[120px] object-contain'
+					className='h-[40px] md:h-[50px] max-w-[100px] object-contain'
 				/>
 			))}
 		</div>
