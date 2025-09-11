@@ -17,6 +17,7 @@ import { ProfileCardProps, TestimonialCardProps } from '@/types/card';
 import TestimonialCard from '@/components/custom/card/TestimonialCard';
 import NewsletterSection from '@/components/layout/NewsletterSection';
 import Footer from '@/components/layout/Footer';
+import { UserType } from '@/types/user';
 
 const profiles: ProfileCardProps[] = [
 	{
@@ -76,12 +77,19 @@ const sponsors: SponsorshipProps = {
 };
 
 const links: NavbarLink[] = [
-	{ name: 'Home', href: '/' },
+	{ name: 'Accueil', href: '/' },
 	{ name: 'Features', href: '/features' },
 	{ name: 'Pricing', href: '/pricing' },
 	{ name: 'About', href: '/about' },
 	{ name: 'Contact', href: '/contact' },
 ];
+
+const user: UserType = {
+	id: '1',
+	name: 'Victor Deo',
+	email: 'victor@capacity.dev',
+	avatar: '/victory.jpeg',
+};
 
 export default function Home() {
 	const isMobile = useMediaQuery('(max-width: 639px)');
@@ -95,7 +103,7 @@ export default function Home() {
 				) : isTablet ? (
 					<NavbarTablet links={links} />
 				) : (
-					<NavbarDesktop links={links} />
+					<NavbarDesktop links={links} isAuthenticated={true} user={user} />
 				)}
 			</header>
 			<main>
