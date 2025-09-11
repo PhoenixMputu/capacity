@@ -38,7 +38,7 @@ const NavbarTablet = ({ links }: NavbarTabletProps) => {
 				<Button variant='default'>Faire un don</Button>
 			</div>
 			{isVisible && (
-				<div className='absolute left-0 right-0 top-20 bg-white z-10 px-4 py-6 flex flex-col items-start gap-4'>
+				<div className='absolute left-0 right-0 top-16 bg-white z-10 px-4 py-6 flex flex-col items-start gap-4'>
 					<NavigationMenu>
 						<NavigationMenuList className='flex flex-col gap-2 items-start'>
 							{links.map((link) => (

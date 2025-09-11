@@ -99,7 +99,7 @@ export default function Home() {
 		<>
 			<header className='w-full'>
 				{isMobile ? (
-					<NavbarMobile links={links} />
+					<NavbarMobile links={links} isAuthenticated={true} user={user} />
 				) : isTablet ? (
 					<NavbarTablet links={links} />
 				) : (
