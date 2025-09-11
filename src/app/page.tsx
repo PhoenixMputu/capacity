@@ -101,7 +101,7 @@ export default function Home() {
 				{isMobile ? (
 					<NavbarMobile links={links} isAuthenticated={true} user={user} />
 				) : isTablet ? (
-					<NavbarTablet links={links} />
+					<NavbarTablet links={links} isAuthenticated={false} user={user} />
 				) : (
 					<NavbarDesktop links={links} isAuthenticated={true} user={user} />
 				)}
